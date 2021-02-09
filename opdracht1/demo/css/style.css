@@ -1,16 +1,108 @@
-* {
-  box-sizing:border-box;
-}
-html{
-  background:#eee;
-  background: url("../img/flagF4D.png") center no-repeat;
+html, body {
+    height: 100%;
 }
 
-body{
-  max-width: 30em;
-  margin: 1em auto;
-  padding: 1em;
-  background: #fff;
-  border-radius: 1em;
-  box-shadow: 0.5em 0.5em 0.5em rgba(68,68,68,0.6);
+body > header,
+body > main,
+body > footer {
+    padding: 0 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo svg {
+    max-width: 46px;
+    margin-right: 8px;
+}
+.logo span {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+main {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+main header {
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 32px;
+    grid-gap: 12px;
+    align-items: center;
+}
+input[type="text"] {
+    border-color: #e3e3e3;
+    border-width: 1px;
+    background-color: #fff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 16px;
+    padding: 12px 16px;
+}
+
+.photo-list article {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.photo-list article img {
+    width: 100%;
+    /* https://css-tricks.com/a-first-look-at-aspect-ratio/ */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.filter-menu {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 100%;
+    background: #fff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    height: 1px;
+    transition: height 400ms ease-in;
+}
+
+.filter-menu.show {
+    height: 230px;
+}
+
+.color-filter {
+    padding: 16px;
+}
+
+.color-filter span {
+    display: block;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 16px;
+}
+
+.color-filter .colors {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+    grid-gap: 16px;
+}
+
+.color-filter .colors .color {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.color-filter .own-color {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
 }
