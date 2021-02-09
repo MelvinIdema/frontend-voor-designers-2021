@@ -1,10 +1,17 @@
-const search = document.querySelector("#search");
-const colorFilter = document.querySelector(".filter-menu");
+const searchFilter = document.querySelector(".search-filter");
+const searchBar = document.querySelector(".search-bar input");
 
-search.addEventListener("focus", _ => {
-    colorFilter.classList.add("show");
+searchBar.addEventListener("click", _ => {
+    searchFilter.classList.add("active");
 })
 
-search.addEventListener("blur", _ => {
-    colorFilter.classList.remove('show');
+let activeColor = document.querySelector(".color.active");
+const colors = document.querySelectorAll(".color");
+
+colors.forEach(color => {
+    color.addEventListener("click", e => {
+        activeColor.classList.remove("active");
+        e.target.classList.add("active");
+        activeColor = e.target;
+    })
 })
