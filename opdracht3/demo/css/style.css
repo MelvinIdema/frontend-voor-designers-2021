@@ -61,5 +61,3 @@ body { margin: 0; display: grid; place-items: center; font-family: 'Open Sans', 
         transform: translateX(-50%) translateY(-5px);
     }
 }
-
-/* Just a check for GitHub */

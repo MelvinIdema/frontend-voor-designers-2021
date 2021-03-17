@@ -23,7 +23,7 @@ function insertQuote(quote) {
 }
 
 async function fetchQuote() {
-    const response = await fetch('http://api.quotable.io/random?maxLength=80');
+    const response = await fetch('https://api.quotable.io/random?maxLength=80');
     return await response.json();
 }
 
