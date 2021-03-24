@@ -72,10 +72,10 @@ function render() {
     if(card.pos.x <= -150) {
         card.el.style.backgroundColor = "red";
 
-        card.el.remove();
-        card.el = document.querySelectorAll(".card")[0];
-        card.el.classList.add("primary");
-        card.pos.x = 0;
+        // card.el.remove();
+        // card.el = document.querySelectorAll(".card")[0];
+        // card.el.classList.add("primary");
+        // card.pos.x = 0;
 
     } else if(card.pos.x >= 150) {
         card.el.style.backgroundColor = "green";
@@ -158,3 +158,4 @@ async function newQuote() {
 }
 
 newQuote();
+createCard();
