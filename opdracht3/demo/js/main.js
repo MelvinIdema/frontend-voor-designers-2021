@@ -1,15 +1,18 @@
 const quoteContainer = document.querySelector(".quote-container");
 const kbHint = document.querySelector(".kb-hint");
+const loader = document.querySelector(".loader");
 let pressedKey = null;
 let theQuote = null;
 
 function setLoading(loading) {
     if(loading) {
+        loader.style.display = "block";
         quoteContainer.textContent = "Loading...";
         return console.log("Loading...");
     }
 
     // If loaded:
+    loader.style.display = "none";
     console.log("Loaded!");
 }
 
