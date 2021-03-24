@@ -1,0 +1,93 @@
+html, body { height: 100%; }
+body { margin: 0; display: grid; place-items: center; font-family: proxima-soft, sans-serif; font-weight: 400; font-style: normal; background: #fbfbf8;}
+
+.quote-container {
+    display: flex;
+    height: 450px; width: 800px;
+}
+
+.quote-container > * {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.dislike-container, .like-container {
+    height: 100%; width: 20%;
+}
+
+.dislike, .like {
+    display: grid;
+    place-items: center;
+    height: 50px; width: 50px;
+    border: 1px solid currentColor;
+    border-radius: 100%;
+}
+
+.dislike svg, .like svg {
+    height: 20px; width: 20px;
+}
+
+.card-container {
+    position: relative;
+    height: 100%; width: 60%;
+}
+
+.deck {
+    position: relative;
+    height: 450px; width: 320px;
+}
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 450px; width: 320px;
+    padding: 24px;
+    z-index: 0;
+
+    border: 1px solid #707070;
+    border-radius: 15px;
+    background: white;
+
+    font-size: 24px;
+    font-family: proxima-soft, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    user-select: none;
+
+    transition: transform 100ms ease-in-out;
+}
+
+.card:nth-child(2) { transform: rotate(1deg) }
+.card:nth-child(3) { transform: rotate(-1deg) }
+.card:nth-child(4) { transform: rotate(1deg) }
+
+.card.primary {
+    z-index: 1;
+    cursor: grab;
+}
+
+.card.primary.hovered {
+    transform: rotate(.5deg) scale(1.01);
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 3px 14px 0px;
+}
+
+.card.primary.dragged {
+    cursor: grabbing;
+    transform: rotate(1.2deg) scale(1.03) !important;
+    box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
+}
+
+.card .header {
+    height: 100%;
+}
+
+.card .footer {
+    text-align: right;
+}
+
+.like-container { color: green; }
+.dislike-container { color: red; }
+

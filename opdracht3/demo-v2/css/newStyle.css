@@ -1,0 +1,24 @@
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 450px; width: 320px;
+    padding: 24px;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    background: #fff;
+    font-size: 24px;
+    font-family: proxima-soft, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    user-select: none;
+    cursor: grab;
+}
+
+.card .header {
+    flex-grow: 1;
+}
+
+.card .footer {
+    text-align: right;
+}
