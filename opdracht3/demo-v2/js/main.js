@@ -39,11 +39,6 @@ card.el.addEventListener("mouseleave", _ => hoverCard(false));
 document.addEventListener("mousedown", _ => { if(card.is.hovered) dragCard(); });
 document.addEventListener("mouseup", _ => { dropCard() });
 
-window.addEventListener('mousemove', setMousePos);
-window.addEventListener('touchmove', setMousePos);
-window.addEventListener('touchstart', setMousePos);
-window.addEventListener("scroll", setMousePos);
-
 function hoverCard(isHovered) {
     card.is.hovered = isHovered;
     if(isHovered) {
